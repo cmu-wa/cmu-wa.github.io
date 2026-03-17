@@ -3,34 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CMU-WA | وحدة الرصد السيبراني</title>
+    <meta name="description" content="المنصة الرسمية لوحدة الرصد السيبراني في غرب آسيا (CMU-WA) - رصد التهديدات الرقمية وتعزيز السيادة السيبرانية برئاسة سهيل الهزبري.">
+    <meta name="keywords" content="CMU-WA, وحدة الرصد السيبراني, الهكر الهزبري, أمن سيبراني اليمن, صفر الانكسار, Zero-Break Protocol">
+    <meta name="author" content="Hacker Al-Hazbari">
+    
+    <title>CMU-WA | وحدة الرصد السيبراني - غرب آسيا</title>
+    
+    <link rel="icon" href="https://img.icons8.com/color/48/000000/shield.png" type="image/x-icon">
+
     <style>
-        body { background-color: #050505; color: #00ff41; font-family: 'Courier New', Courier, monospace; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; margin: 0; text-shadow: 0 0 5px #00ff41; }
-        .container { border: 1px solid #00ff41; padding: 30px; border-radius: 10px; background: rgba(0, 255, 65, 0.05); text-align: center; max-width: 80%; }
-        h1 { font-size: 2.5em; letter-spacing: 5px; }
-        .status { color: #fff; background: #c00; padding: 5px 10px; font-weight: bold; }
-        a { color: #00ff41; text-decoration: none; border: 1px solid #00ff41; padding: 5px 10px; transition: 0.3s; }
-        a:hover { background: #00ff41; color: #000; }
+        :root {
+            --neon-green: #00ff41;
+            --dark-bg: #0a0a0a;
+            --text-gray: #b0b0b0;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--neon-green);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .cyber-border {
+            border: 2px solid var(--neon-green);
+            padding: 40px;
+            position: relative;
+            background: rgba(0, 255, 65, 0.02);
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.1);
+            max-width: 700px;
+            width: 90%;
+            border-radius: 5px;
+        }
+
+        .header-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .sub-title {
+            text-align: center;
+            color: var(--text-gray);
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+
+        .status-bar {
+            background: #1a1a1a;
+            padding: 10px;
+            border-right: 4px solid var(--neon-green);
+            margin-bottom: 20px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .content {
+            line-height: 1.8;
+            color: #e0e0e0;
+            text-align: justify;
+        }
+
+        .footer-links {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        a.btn {
+            color: var(--neon-green);
+            text-decoration: none;
+            border: 1px solid var(--neon-green);
+            padding: 8px 15px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        a.btn:hover {
+            background: var(--neon-green);
+            color: #000;
+            box-shadow: 0 0 10px var(--neon-green);
+        }
+
+        .scanline {
+            width: 100%;
+            height: 2px;
+            background: rgba(0, 255, 65, 0.1);
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: scan 4s linear infinite;
+        }
+
+        @keyframes scan {
+            0% { top: 0; }
+            100% { top: 100%; }
+        }
     </style>
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "وحدة الرصد السيبراني - غرب آسيا",
+      "@type": "GovernmentOrganization",
+      "name": "West Asia Cyber Monitoring Unit",
       "alternateName": "CMU-WA",
       "url": "https://cmu-wa.github.io",
-      "identifier": "Q138679934"
+      "logo": "https://img.icons8.com/color/48/000000/shield.png",
+      "founder": {
+        "@type": "Person",
+        "name": "Suhail Al-Hazbari",
+        "jobTitle": "Lead AI & Security Engineer"
+      },
+      "sameAs": [
+        "https://www.wikidata.org/wiki/Q138679934"
+      ],
+      "description": "المؤسسة البحثية الرائدة في تحليل الثغرات الأمنية وبروتوكولات الدفاع السيبراني في منطقة غرب آسيا."
     }
     </script>
 </head>
 <body>
-    <div class="container">
-        <h1>UNIT: CMU-WA</h1>
-        <p>المنصة الرسمية لوحدة الرصد السيبراني - غرب آسيا</p>
-        <p>الحالة: <span class="status">نشط - مراقبة التهديدات</span></p>
-        <hr style="border-color: #00ff41;">
-        <p>نعمل على تحليل بروتوكولات الدفاع الرقمي وتعزيز السيادة السيبرانية.</p>
-        <p><a href="https://www.wikidata.org/wiki/Q138679934">بيانات الهوية الرقمية (Wikidata)</a></p>
+
+<div class="cyber-border">
+    <div class="scanline"></div>
+    
+    <div class="header-title">CMU-WA</div>
+    <div class="sub-title">وحدة الرصد السيبراني - غرب آسيا</div>
+
+    <div class="status-bar">
+        > النظام: <span style="color: #fff;">نشط</span><br>
+        > البروتوكول: <span style="color: var(--neon-green);">Zero-Break (ZBP)</span><br>
+        > الموقع الجغرافي: <span style="color: #fff;">اليمن / غرب آسيا</span>
     </div>
+
+    <div class="content">
+        تقوم وحدة <strong>CMU-WA</strong> برصد وتحليل المشهد السيبراني لتعزيز السيادة الرقمية. نركز على تطوير استراتيجيات "الكمين المنطقي" وحماية البنى التحتية الحيوية من خلال الابتكار التقني المستقل.
+    </div>
+
+    <div class="footer-links">
+        <a href="https://www.wikidata.org/wiki/Q138679934" class="btn" target="_blank">الهوية الرقمية (Wikidata)</a>
+        <a href="https://github.com/cmu-wa" class="btn" target="_blank">المستودع البرمجي</a>
+    </div>
+</div>
+
 </body>
 </html>
