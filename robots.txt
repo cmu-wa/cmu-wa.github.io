@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://cmu-wa.github.io/sitemap.xml
