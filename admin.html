@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدارة الأخبار - وحدة الرصد السيبراني</title>
+    <!-- نفس الخطوط والألوان لتوحيد الهوية -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0A0C0E;
+            color: #F0F2F4;
+            padding: 30px 20px;
+        }
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: #14181C;
+            border-radius: 30px;
+            padding: 30px;
+            border: 1px solid #A61717;
+            box-shadow: 0 20px 30px -15px rgba(166,23,23,0.3);
+        }
+        h1 {
+            font-family: 'Amiri', serif;
+            color: #A61717;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #9AA5B5;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 12px 15px;
+            background: #1E2329;
+            border: 1px solid #2E3A44;
+            border-radius: 12px;
+            color: #F0F2F4;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #A61717;
+        }
+        button {
+            background: #A61717;
+            color: white;
+            border: none;
+            padding: 14px 25px;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            width: 100%;
+            transition: 0.2s;
+            border: 1px solid #8B0000;
+        }
+        button:hover {
+            background: #8B0000;
+            transform: translateY(-2px);
+        }
+        .status {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 12px;
+            display: none;
+        }
+        .status.success {
+            background: rgba(0,150,0,0.2);
+            border: 1px solid #00A86B;
+            color: #A5D6A5;
+            display: block;
+        }
+        .status.error {
+            background: rgba(166,23,23,0.2);
+            border: 1px solid #A61717;
+            color: #FF8A8A;
+            display: block;
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #9AA5B5;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            color: #A61717;
+        }
+        .token-hint {
+            background: #1E2329;
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border-right: 4px solid #A61717;
+            font-size: 0.9rem;
+            color: #9AA5B5;
+        }
+        .token-hint i {
+            color: #C99A3B;
+            margin-left: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-shield-halos"></i> إدارة الأخبار</h1>
+        
+        <!-- منطقة تعليمات الـ Token -->
+        <div class="token-hint">
+            <i class="fas fa-lock"></i>
+            <strong>مطلوب Token GitHub</strong><br>
+            أنشئ token جديد بصلاحية <code>repo</code> من 
+            <a href="https://github.com/settings/tokens" target="_blank" style="color:#A61717;">الإعدادات</a>
+            والصقه في الحقل أدناه (سيتم تذكره مؤقتاً).
+        </div>
+
+        <!-- نموذج إدخال بيانات GitHub -->
+        <div class="input-group">
+            <label><i class="fas fa-user"></i> اسم المستخدم (GitHub)</label>
+            <input type="text" id="githubUsername" placeholder="مثال: cmu-wa" value="cmu-wa">
+        </div>
+        <div class="input-group">
+            <label><i class="fas fa-code-branch"></i> اسم المستودع</label>
+            <input type="text" id="githubRepo" placeholder="مثال: cmu-wa.github.io" value="cmu-wa.github.io">
+        </div>
+        <div class="input-group">
+            <label><i class="fas fa-key"></i> Personal Access Token (كلاسيكي)</label>
+            <input type="password" id="githubToken" placeholder="ghp_xxxxxxxxxxxxxxx">
+        </div>
+
+        <hr style="border-color:#2E3A44; margin:30px 0;">
+
+        <!-- نموذج إدخال الخبر -->
+        <div class="input-group">
+            <label>عنوان الخبر</label>
+            <input type="text" id="newsTitle" placeholder="مثال: الجيش السيبراني اليمني">
+        </div>
+        <div class="input-group">
+            <label>الوصف</label>
+            <textarea id="newsDesc" rows="3" placeholder="تفاصيل التقرير..."></textarea>
+        </div>
+        <div class="input-group">
+            <label>التاريخ (YYYY-MM-DD)</label>
+            <input type="date" id="newsDate" value="2026-03-20">
+        </div>
+        <div class="input-group">
+            <label>المكان</label>
+            <input type="text" id="newsLocation" placeholder="مثال: اليمن / دولي / تقني">
+        </div>
+        <div class="input-group">
+            <label>العلامات (tags) - افصل بينها بفواصل</label>
+            <input type="text" id="newsTags" placeholder="تهديد عالي, APT, اختراق">
+        </div>
+        <div class="input-group">
+            <label>الأيقونة (اسم أيقونة FontAwesome)</label>
+            <select id="newsIcon">
+                <option value="skull-crossbones">skull-crossbones</option>
+                <option value="user-secret">user-secret</option>
+                <option value="shield-virus">shield-virus</option>
+                <option value="ghost">ghost</option>
+                <option value="bolt">bolt</option>
+                <option value="bug">bug</option>
+                <option value="flag">flag</option>
+                <option value="fire">fire</option>
+                <option value="skull">skull</option>
+            </select>
+        </div>
+
+        <button onclick="publishNews()"><i class="fas fa-cloud-upload-alt"></i> نشر الخبر</button>
+
+        <div id="statusMessage" class="status"></div>
+        <a href="index.html" class="back-link"><i class="fas fa-arrow-right"></i> العودة للصفحة الرئيسية</a>
+    </div>
+
+    <script>
+        // دالة لجلب محتوى الملف من GitHub
+        async function fetchGitHubFile(username, repo, path, token) {
+            const url = `https://api.github.com/repos/${username}/${repo}/contents/${path}`;
+            const response = await fetch(url, {
+                headers: {
+                    Authorization: `token ${token}`,
+                    Accept: 'application/vnd.github.v3+json',
+                },
+            });
+            if (!response.ok) throw new Error('فشل في جلب الملف');
+            return await response.json();
+        }
+
+        // دالة لتحديث الملف على GitHub
+        async function updateGitHubFile(username, repo, path, token, content, sha, message) {
+            const url = `https://api.github.com/repos/${username}/${repo}/contents/${path}`;
+            const body = {
+                message: message,
+                content: btoa(unescape(encodeURIComponent(content))), // ترميز Base64 مع دعم العربية
+                sha: sha,
+            };
+            const response = await fetch(url, {
+                method: 'PUT',
+                headers: {
+                    Authorization: `token ${token}`,
+                    Accept: 'application/vnd.github.v3+json',
+                },
+                body: JSON.stringify(body),
+            });
+            if (!response.ok) throw new Error('فشل في رفع الملف');
+            return await response.json();
+        }
+
+        // دالة النشر الرئيسية
+        async function publishNews() {
+            const statusDiv = document.getElementById('statusMessage');
+            statusDiv.className = 'status';
+            statusDiv.style.display = 'none';
+
+            // قراءة المدخلات
+            const username = document.getElementById('githubUsername').value.trim();
+            const repo = document.getElementById('githubRepo').value.trim();
+            const token = document.getElementById('githubToken').value.trim();
+            const title = document.getElementById('newsTitle').value.trim();
+            const desc = document.getElementById('newsDesc').value.trim();
+            const date = document.getElementById('newsDate').value;
+            const location = document.getElementById('newsLocation').value.trim();
+            const tagsInput = document.getElementById('newsTags').value.trim();
+            const icon = document.getElementById('newsIcon').value;
+
+            // التحقق من الحقول الأساسية
+            if (!username || !repo || !token) {
+                showStatus('يرجى إدخال بيانات GitHub كاملة', 'error');
+                return;
+            }
+            if (!title || !desc) {
+                showStatus('العنوان والوصف مطلوبان', 'error');
+                return;
+            }
+
+            // تحويل العلامات إلى مصفوفة
+            const tags = tagsInput ? tagsInput.split(',').map(t => t.trim()).filter(t => t) : [];
+
+            // إظهار رسالة التحميل
+            showStatus('جاري النشر...', 'success');
+
+            try {
+                // 1. جلب الملف الحالي data.json من GitHub
+                const fileData = await fetchGitHubFile(username, repo, 'data.json', token);
+                const currentContent = decodeURIComponent(escape(atob(fileData.content))); // فك الترميز
+                const jsonData = JSON.parse(currentContent);
+
+                // 2. إضافة الخبر الجديد
+                const newNews = {
+                    title: title,
+                    date: date,
+                    location: location || 'غرب آسيا',
+                    description: desc,
+                    tags: tags.length ? tags : ['تقرير'],
+                    icon: icon,
+                };
+
+                // نضيف في البداية عشان يظهر أولاً
+                jsonData.news = [newNews, ...(jsonData.news || [])];
+
+                // 3. تحويل إلى JSON وتحديث الملف
+                const updatedContent = JSON.stringify(jsonData, null, 2);
+                await updateGitHubFile(
+                    username,
+                    repo,
+                    'data.json',
+                    token,
+                    updatedContent,
+                    fileData.sha,
+                    `إضافة خبر: ${title} (يدوي)`
+                );
+
+                showStatus('✅ تم نشر الخبر بنجاح! الصفحة الرئيسية ستحدث خلال دقائق.', 'success');
+                
+                // تنظيف الحقول اختيارياً
+                document.getElementById('newsTitle').value = '';
+                document.getElementById('newsDesc').value = '';
+                document.getElementById('newsLocation').value = '';
+                document.getElementById('newsTags').value = '';
+            } catch (error) {
+                console.error(error);
+                showStatus('❌ فشل النشر: ' + error.message, 'error');
+            }
+        }
+
+        function showStatus(message, type) {
+            const statusDiv = document.getElementById('statusMessage');
+            statusDiv.textContent = message;
+            statusDiv.className = 'status ' + type;
+            statusDiv.style.display = 'block';
+        }
+
+        // حفظ token في sessionStorage لتجنب إعادة الإدخال (اختياري)
+        window.onload = function() {
+            const savedToken = sessionStorage.getItem('githubToken');
+            if (savedToken) {
+                document.getElementById('githubToken').value = savedToken;
+            }
+        };
+        window.onbeforeunload = function() {
+            const token = document.getElementById('githubToken').value;
+            if (token) sessionStorage.setItem('githubToken', token);
+        };
+    </script>
+</body>
+</html>
