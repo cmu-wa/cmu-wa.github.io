@@ -4,157 +4,636 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <meta name="google-site-verification" content="McxhZNBljV8V4gWvGqi1ClimW0eTHM1C0STuV_tZccM" />
+    <title>وحدة الرصد السيبراني | غرب آسيا - CMU-WA</title>
+    <meta name="description" content="المركز الإقليمي المستقل لرصد التهديدات السيبرانية المتقدمة وتحليل أنشطة الهكرز في منطقة غرب آسيا.">
+    <meta name="author" content="CMU-WA Cyber Monitoring Unit">
     
-    <meta name="description" content="المنصة الرسمية لوحدة الرصد السيبراني في غرب آسيا (CMU-WA) - رصد التهديدات الرقمية وتعزيز السيادة السيبرانية برئاسة سهيل الهزبري.">
-    <meta name="keywords" content="CMU-WA, وحدة الرصد السيبراني, الهكر الهزبري, أمن سيبراني اليمن, صفر الانكسار, Zero-Break Protocol">
-    <meta name="author" content="Hacker Al-Hazbari">
+    <!-- Schema Markup - مؤسسة إخبارية أمنية -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "NewsMediaOrganization",
+        "name": "وحدة الرصد السيبراني لغرب آسيا",
+        "alternateName": "Cyber Monitoring Unit - West Asia (CMU-WA)",
+        "url": "https://cmu-wa.github.io",
+        "description": "منصة إقليمية مستقلة لرصد التهديدات السيبرانية وتحليل أنشطة القرصنة.",
+        "areaServed": ["YE", "SA", "IQ", "PS", "JO", "LB", "SY"]
+    }
+    </script>
     
-    <title>CMU-WA | وحدة الرصد السيبراني - غرب آسيا</title>
+    <!-- خطوط احترافية -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     
-    <link rel="icon" href="https://img.icons8.com/color/48/000000/shield.png" type="image/x-icon">
-
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
     <style>
+        /* ===== نمط التهديد القرمزي ===== */
         :root {
-            --neon-green: #00ff41;
-            --dark-bg: #050505;
-            --text-gray: #b0b0b0;
+            --bg-total: #0A0C0E;        /* أسود كربوني */
+            --bg-panel: #14181C;         /* لوحة داكنة */
+            --bg-card: #1E2329;           /* بطاقات عميقة */
+            --red-alert: #A61717;          /* أحمر تحذيري رئيسي */
+            --red-dim: #6D1A1A;            /* أحمر خافت للخلفيات */
+            --gold-warning: #C99A3B;        /* ذهبي للتحذيرات الخاصة */
+            --text-light: #F0F2F4;          /* نص فاتح */
+            --text-dim: #9AA5B5;             /* نص ثانوي */
+            --border-sharp: #2E3A44;          /* حدود حادة */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         body {
-            background-color: var(--dark-bg);
-            color: var(--neon-green);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            overflow-x: hidden;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-total);
+            color: var(--text-light);
+            line-height: 1.6;
+            background-image: radial-gradient(circle at 70% 10%, rgba(166, 23, 23, 0.05) 0%, transparent 40%);
         }
 
-        .cyber-border {
-            border: 2px solid var(--neon-green);
-            padding: 40px;
-            position: relative;
-            background: rgba(0, 255, 65, 0.02);
-            box-shadow: 0 0 20px rgba(0, 255, 65, 0.1);
-            max-width: 700px;
-            width: 90%;
-            border-radius: 5px;
+        /* العناوين العربية بالكوفي */
+        h1, h2, h3, h4, .arabic-title {
+            font-family: 'Amiri', serif;
+            font-weight: 700;
+            letter-spacing: 0.02em;
         }
 
-        .header-title {
+        .container {
+            width: 92%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* ===== شريط التحذير العلوي ===== */
+        .alert-bar {
+            background: var(--red-alert);
+            color: white;
             text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            letter-spacing: 3px;
+            padding: 8px 0;
+            font-size: 0.85rem;
+            font-weight: 700;
             text-transform: uppercase;
-            font-weight: bold;
+            letter-spacing: 1.5px;
+            border-bottom: 2px solid #8B0000;
         }
 
-        .sub-title {
-            text-align: center;
-            color: var(--text-gray);
-            margin-bottom: 30px;
-            font-size: 1.1rem;
+        .alert-bar i {
+            margin: 0 8px;
         }
 
-        .status-bar {
-            background: #111;
-            padding: 15px;
-            border-right: 4px solid var(--neon-green);
-            margin-bottom: 20px;
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 0.9rem;
-        }
-
-        .content {
-            line-height: 1.8;
-            color: #e0e0e0;
-            text-align: justify;
-        }
-
-        .footer-links {
-            margin-top: 30px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        a.btn {
-            color: var(--neon-green);
-            text-decoration: none;
-            border: 1px solid var(--neon-green);
-            padding: 10px 20px;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            font-weight: bold;
-        }
-
-        a.btn:hover {
-            background: var(--neon-green);
-            color: #000;
-            box-shadow: 0 0 15px var(--neon-green);
-        }
-
-        /* خط المسح المتحرك - تأثير الهكر */
-        .scanline {
-            width: 100%;
-            height: 2px;
-            background: rgba(0, 255, 65, 0.1);
-            position: absolute;
+        /* ===== الهيدر الثابت ===== */
+        header {
+            background: rgba(10, 12, 14, 0.98);
+            backdrop-filter: blur(8px);
+            border-bottom: 2px solid var(--red-alert);
+            padding: 15px 0;
+            position: sticky;
             top: 0;
-            left: 0;
-            animation: scan 4s linear infinite;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.7);
         }
 
-        @keyframes scan {
-            0% { top: 0; }
-            100% { top: 100%; }
+        .header-flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-icon {
+            font-size: 2.5rem;
+            color: var(--red-alert);
+            filter: drop-shadow(0 0 8px rgba(166, 23, 23, 0.5));
+        }
+
+        .site-title h1 {
+            font-size: 2rem;
+            line-height: 1.2;
+            color: white;
+        }
+
+        .site-title p {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            letter-spacing: 1px;
+        }
+
+        /* ===== التنقل الاحترافي ===== */
+        nav ul {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 6px 0;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--red-alert);
+            border-bottom-color: var(--red-alert);
+        }
+
+        /* ===== قسم الهيرو ===== */
+        .hero {
+            padding: 60px 0 40px;
+            background: linear-gradient(180deg, var(--bg-panel) 0%, var(--bg-total) 100%);
+            border-bottom: 1px solid var(--border-sharp);
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .hero h2 span {
+            color: var(--red-alert);
+            border-bottom: 3px solid var(--red-alert);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-dim);
+            max-width: 800px;
+            margin-bottom: 30px;
+        }
+
+        .threat-level {
+            display: inline-block;
+            background: rgba(166, 23, 23, 0.15);
+            border: 1px solid var(--red-alert);
+            color: #FF8A8A;
+            padding: 8px 25px;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        /* ===== شبكة التهديدات ===== */
+        .section-title {
+            font-size: 2.2rem;
+            margin: 50px 0 30px;
+            padding-right: 10px;
+            border-right: 6px solid var(--red-alert);
+        }
+
+        .threat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .threat-card {
+            background: var(--bg-card);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--border-sharp);
+            transition: 0.3s;
+            box-shadow: 0 10px 20px -10px rgba(0,0,0,0.8);
+        }
+
+        .threat-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--red-alert);
+            box-shadow: 0 15px 25px -12px rgba(166, 23, 23, 0.4);
+        }
+
+        .card-header {
+            height: 140px;
+            background: #1F2A33;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--red-alert);
+            font-size: 3rem;
+            border-bottom: 2px solid var(--red-alert);
+            position: relative;
+        }
+
+        .card-header .date-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0,0,0,0.7);
+            color: var(--text-dim);
+            padding: 4px 12px;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border: 1px solid var(--red-alert);
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .meta-info {
+            display: flex;
+            gap: 15px;
+            color: var(--text-dim);
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+        }
+
+        .meta-info i {
+            color: var(--red-alert);
+            margin-left: 5px;
+        }
+
+        .threat-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 15px 0;
+        }
+
+        .tag {
+            background: rgba(166, 23, 23, 0.1);
+            border: 1px solid #6D1A1A;
+            color: #FFA5A5;
+            padding: 3px 12px;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .tag-critical {
+            background: var(--red-alert);
+            border-color: #A61717;
+            color: white;
+        }
+
+        /* ===== قسم المطلوبين (محسّن) ===== */
+        .wanted-section {
+            background: linear-gradient(145deg, #0F151B, #080C10);
+            border-radius: 40px;
+            padding: 40px;
+            margin: 50px 0;
+            border: 1px solid var(--red-alert);
+            box-shadow: inset 0 0 30px rgba(166, 23, 23, 0.1);
+        }
+
+        .wanted-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .wanted-row {
+            background: rgba(20, 24, 28, 0.9);
+            border-radius: 50px;
+            padding: 15px 25px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border: 1px solid #2E3A44;
+            transition: 0.2s;
+        }
+
+        .wanted-row:hover {
+            border-color: var(--red-alert);
+            background: #1A2129;
+        }
+
+        .wanted-rank {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--red-alert);
+            min-width: 60px;
+            text-align: center;
+            opacity: 0.8;
+        }
+
+        .wanted-info {
+            flex: 1;
+        }
+
+        .wanted-info h4 {
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+            color: white;
+        }
+
+        .wanted-info p {
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
+
+        .wanted-badge {
+            background: var(--red-alert);
+            color: white;
+            padding: 8px 22px;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            border: 1px solid #FF6A6A;
+            letter-spacing: 0.5px;
+        }
+
+        /* ===== ختم الأمان ===== */
+        .security-footer {
+            background: #0F151B;
+            border-top: 2px solid var(--red-alert);
+            padding: 25px 0;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .seal {
+            display: inline-block;
+            padding: 10px 30px;
+            border: 1px dashed var(--red-alert);
+            border-radius: 50px;
+            background: rgba(166, 23, 23, 0.05);
+            color: var(--text-dim);
+        }
+
+        .seal i {
+            color: var(--red-alert);
+            margin: 0 8px;
+        }
+
+        .seal strong {
+            color: #FF8A8A;
+        }
+
+        /* ===== تجاوب كامل ===== */
+        @media (max-width: 992px) {
+            .header-flex {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            .hero h2 {
+                font-size: 2.3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .wanted-row {
+                flex-direction: column;
+                text-align: center;
+                border-radius: 30px;
+            }
+            .wanted-rank {
+                min-width: auto;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                width: 95%;
+            }
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* مؤشر التحميل */
+        .loading {
+            text-align: center;
+            padding: 30px;
+            color: var(--text-dim);
         }
     </style>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "GovernmentOrganization",
-      "name": "West Asia Cyber Monitoring Unit",
-      "alternateName": "CMU-WA",
-      "url": "https://cmu-wa.github.io",
-      "founder": {
-        "@type": "Person",
-        "name": "Suhail Al-Hazbari"
-      },
-      "identifier": "Q138679934"
-    }
-    </script>
 </head>
 <body>
 
-<div class="cyber-border">
-    <div class="scanline"></div>
-    
-    <div class="header-title">CMU-WA</div>
-    <div class="sub-title">وحدة الرصد السيبراني - غرب آسيا</div>
-
-    <div class="status-bar">
-        [+] الحالة: <span style="color: #fff;">مؤمن وموثق لدى Google</span><br>
-        [+] المعرف الدولي: <span style="color: var(--neon-green);">Q138679934</span><br>
-        [+] المهندس المسؤول: <span style="color: #fff;">سهيل الهزبري (Hacker Al-Hazbari)</span>
+    <!-- شريط تحذيري علوي -->
+    <div class="alert-bar">
+        <i class="fas fa-exclamation-triangle"></i> حالة التأهب: نشاط سيبراني مكثف في المنطقة <i class="fas fa-exclamation-triangle"></i>
     </div>
 
-    <div class="content">
-        مرحباً بكم في البوابة الرسمية لوحدة <strong>CMU-WA</strong>. نحن نعمل على تطوير بروتوكولات دفاعية متقدمة لضمان أمن الفضاء الرقمي في منطقة غرب آسيا، مع التركيز على الابتكار التقني والسيادة السيبرانية المستقلة.
-    </div>
+    <header>
+        <div class="container header-flex">
+            <div class="logo-area">
+                <div class="logo-icon">
+                    <i class="fas fa-shield-halos"></i>
+                </div>
+                <div class="site-title">
+                    <h1>وحدة الرصد السيبراني</h1>
+                    <p>غرب آسيا | CYBER MONITORING UNIT</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">الرصد الحي</a></li>
+                    <li><a href="#">التقارير</a></li>
+                    <li><a href="#">التهديدات</a></li>
+                    <li><a href="#">المطلوبون</a></li>
+                    <li><a href="#">تحليلات APT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <div class="footer-links">
-        <a href="https://www.wikidata.org/wiki/Q138679934" class="btn" target="_blank">Wikidata Profile</a>
-        <a href="https://github.com/cmu-wa" class="btn" target="_blank">Source Code</a>
-    </div>
-</div>
+    <section class="hero">
+        <div class="container">
+            <h2>رصد <span>التهديدات السيبرانية</span> في غرب آسيا</h2>
+            <p>وفقاً لبروتوكول "صفر انكسار" (Zero-Break) وتحليل الشبكات المظلمة. نحن العقل الذي يدير الآلة.</p>
+            <span class="threat-level"><i class="fas fa-circle" style="color: #A61717; font-size: 0.6rem;"></i> التهديد: مرتفع - مستوى التحذير القرمزي</span>
+        </div>
+    </section>
 
+    <main class="container">
+        <!-- حاوية أخبار الديناميكية من JSON -->
+        <h2 class="section-title">آخر أخبار الفضاء السيبراني</h2>
+        <div id="news-container" class="threat-grid">
+            <div class="loading">جاري تحميل آخر الرصودات...</div>
+        </div>
+
+        <!-- قسم المطلوبين (ثابت ومحدث) -->
+        <section class="wanted-section">
+            <h2 class="section-title" style="border-right-color: #C99A3B; color: #C99A3B;">المطلوبون للعدالة</h2>
+            <div class="wanted-list">
+                <div class="wanted-row">
+                    <span class="wanted-rank">#1</span>
+                    <div class="wanted-info">
+                        <h4>الهكر الهزبري (Hacker Al-Hazbari)</h4>
+                        <p>مطور بروتوكول Zero-Break - مطلوب لجهات غربية بتهم تطوير أدوات هجومية.</p>
+                    </div>
+                    <span class="wanted-badge"><i class="fas fa-gavel"></i> مطلوب</span>
+                </div>
+                <div class="wanted-row">
+                    <span class="wanted-rank">#2</span>
+                    <div class="wanted-info">
+                        <h4>عبد الله الشريف</h4>
+                        <p>مصري الجنسية، مطلوب في القاهرة بتهم اختراق مواقع حكومية.</p>
+                    </div>
+                    <span class="wanted-badge"><i class="fas fa-gavel"></i> مطلوب</span>
+                </div>
+                <div class="wanted-row">
+                    <span class="wanted-rank">#3</span>
+                    <div class="wanted-info">
+                        <h4>خلية Project Raven (سابقون)</h4>
+                        <p>مجموعة متعاقدين سابقين مطلوبون في أمريكا بخرق قوانين التجسس.</p>
+                    </div>
+                    <span class="wanted-badge"><i class="fas fa-gavel"></i> مطلوبون</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; padding: 40px 0;">
+            <div>
+                <h3>عن الوحدة</h3>
+                <p style="color: #9AA5B5;">كيان رصد إقليمي مستقل، يعمل وفق بروتوكولات السيادة الرقمية وتتبع التهديدات في غرب آسيا.</p>
+            </div>
+            <div>
+                <h3>رصد</h3>
+                <ul style="list-style: none;">
+                    <li><a href="#" style="color: #9AA5B5; text-decoration: none;">شبكة الاستشعار</a></li>
+                    <li><a href="#" style="color: #9AA5B5; text-decoration: none;">تحليلات الذكاء</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>بيان</h3>
+                <p style="color: #9AA5B5;">نحو فضاء سيبراني عربي مستقل.</p>
+            </div>
+        </div>
+
+        <!-- ختم الأمان -->
+        <div class="security-footer">
+            <div class="container">
+                <span class="seal">
+                    <i class="fas fa-lock"></i> محمي من قبل <strong>وحدة الرصد السيبراني</strong> <i class="fas fa-shield-halos"></i>
+                </span>
+                <p style="margin-top: 15px; color: #5A6777; font-size: 0.8rem;">
+                    <i class="fas fa-shield-alt"></i> اتصالك آمن وسري · جميع قنوات الرصد مشفرة
+                </p>
+            </div>
+        </div>
+        
+        <div style="text-align: center; padding: 20px; background: #080C10; color: #4A555F;">
+            © 2026 · وحدة الرصد السيبراني لغرب آسيا · CMU-WA
+        </div>
+    </footer>
+
+    <!-- سكربت تحميل data.json من نفس المستودع -->
+    <script>
+        // تحميل البيانات من ملف data.json الموجود في نفس المسار
+        async function loadThreatData() {
+            try {
+                const response = await fetch('data.json');
+                if (!response.ok) throw new Error('لم يتم العثور على data.json');
+                
+                const data = await response.json();
+                renderNews(data.news || []);
+            } catch (error) {
+                console.warn('جاري استخدام البيانات الافتراضية (data.json غير موجود)');
+                // بيانات افتراضية إذا لم يوجد الملف
+                const defaultNews = [
+                    {
+                        title: "الجيش السيبراني اليمني",
+                        date: "2026-03-20",
+                        location: "اليمن",
+                        description: "هجمات مركزة على منشآت حيوية في المنطقة باستخدام تقنيات التضليل المتقدم.",
+                        tags: ["تهديد عالي", "APT"],
+                        icon: "skull-crossbones"
+                    },
+                    {
+                        title: "قائمة المطلوبين الجديدة",
+                        date: "2026-03-19",
+                        location: "دولي",
+                        description: "الإنتربول يضيف 5 قراصنة جدد بناءً على تقارير وحدات الرصد الإقليمية.",
+                        tags: ["مطلوبون", "إنتربول"],
+                        icon: "user-secret"
+                    },
+                    {
+                        title: "بروتوكول Zero-Break",
+                        date: "2026-03-18",
+                        location: "تقني",
+                        description: "تطبيق ناجح للبروتوكول الدفاعي الجديد يعطل هجوماً موجهاً ويعكسه على مصدره.",
+                        tags: ["دفاع", "تقني"],
+                        icon: "shield-virus"
+                    },
+                    {
+                        title: "Ghosts of Gaza",
+                        date: "2026-03-17",
+                        location: "فلسطين",
+                        description: "المجموعة الفلسطينية تتبنى اختراقاً جديداً لقواعد عسكرية إسرائيلية.",
+                        tags: ["ساخن", "اختراق"],
+                        icon: "ghost"
+                    }
+                ];
+                renderNews(defaultNews);
+            }
+        }
+
+        function renderNews(newsItems) {
+            const container = document.getElementById('news-container');
+            container.innerHTML = ''; // مسح مؤشر التحميل
+
+            newsItems.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'threat-card';
+                
+                // توليد أيقونة افتراضية
+                const iconName = item.icon || 'skull';
+                
+                card.innerHTML = `
+                    <div class="card-header">
+                        <i class="fas fa-${iconName}"></i>
+                        <span class="date-badge">${item.date || '2026-03-20'}</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>${item.title || 'تقرير جديد'}</h3>
+                        <div class="meta-info">
+                            <span><i class="fas fa-map-marker-alt"></i> ${item.location || 'غرب آسيا'}</span>
+                        </div>
+                        <p>${item.description || 'تفاصيل التقرير متاحة للمشتركين.'}</p>
+                        <div class="threat-tags">
+                            ${item.tags ? item.tags.map(t => `<span class="tag ${t.includes('عالي') || t.includes('مطلوب') ? 'tag-critical' : ''}">${t}</span>`).join('') : ''}
+                        </div>
+                        <a href="#" class="read-link" style="color: #A61717; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 5px;">
+                            تقرير الرصد <i class="fas fa-arrow-left"></i>
+                        </a>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // تنفيذ التحميل عند فتح الصفحة
+        window.addEventListener('DOMContentLoaded', loadThreatData);
+    </script>
 </body>
 </html>
