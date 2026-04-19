@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "اختراق منظومة الدفاع الجوي المعادية",
+    "content": "تم بنجاح تعطيل الرادارات المركزية للكيان المعادي في المنطقة الجنوبية. تم سحب البيانات المشفرة بالكامل.",
+    "imageUrl": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
+    "threatLevel": "Critical",
+    "timestamp": "2026-04-19 14:30:00",
+    "geoLocation": "15.3694° N, 44.1910° E"
+  },
+  {
+    "id": 2,
+    "title": "رصد تحركات مشبوهة في القطاع البحري",
+    "content": "تم رصد نشاط سيبراني مكثف يستهدف خطوط الملاحة. جاري تحليل المصدر وتحديد الأهداف المعادية.",
+    "imageUrl": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80",
+    "threatLevel": "High",
+    "timestamp": "2026-04-19 15:45:00",
+    "geoLocation": "14.7973° N, 42.9544° E"
+  }
+]
