@@ -1,20 +1,222 @@
 [
   {
     "id": 1,
-    "title": "اختراق منظومة الدفاع الجوي المعادية",
-    "content": "تم بنجاح تعطيل الرادارات المركزية للكيان المعادي في المنطقة الجنوبية. تم سحب البيانات المشفرة بالكامل.",
-    "imageUrl": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
+    "title": "كشف أساليب الموساد في التجنيد الرقمي",
+    "content": "وحدة الرصد السيادي تكشف عن شبكات تقنية تستخدم واجهات (وظائف وهمية) ومنظمات إغاثية مشبوهة لتجنيد عملاء في الداخل اليمني. تم تحديد خوارزميات الاستدراج عبر منصات التواصل.",
+    "imageUrl": "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&w=800&q=80",
     "threatLevel": "Critical",
-    "timestamp": "2026-04-19 14:30:00",
-    "geoLocation": "15.3694° N, 44.1910° E"
+    "timestamp": "2026-04-19 23:00:00",
+    "geoLocation": "صنعاء - خلية الرصد الإلكتروني",
+    "source": "جهاز الأمن والمخابرات",
+    "clearance": "سري للغاية - قرمزي"
   },
   {
     "id": 2,
+    "title": "اختراق منظومة الدفاع الجوي المعادية",
+    "content": "تم بنجاح تعطيل الرادارات المركزية للكيان المعادي في المنطقة الجنوبية. تم سحب البيانات المشفرة بالكامل بواسطة وحدات الحرب الإلكترونية اليمنية.",
+    "imageUrl": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
+    "threatLevel": "Critical",
+    "timestamp": "2026-04-19 14:30:00",
+    "geoLocation": "15.3694° N, 44.1910° E",
+    "source": "وحدة الحرب السيبرانية",
+    "clearance": "سري للغاية"
+  },
+  {
+    "id": 3,
+    "title": "إحباط هجوم 'الصفر' على شبكة الاتصالات",
+    "content": "وحدات الهكر الهزبري تنجح في التصدي لهجوم من نوع Zero-Day استهدف مقسمات الاتصالات الوطنية لمنع عزل اليمن عن العالم رقمياً.",
+    "imageUrl": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
+    "threatLevel": "Critical",
+    "timestamp": "2026-04-19 20:15:00",
+    "geoLocation": "السنترال المركزي",
+    "source": "الهيئة العامة للاتصالات",
+    "clearance": "المستوى القرمزي"
+  },
+  {
+    "id": 4,
     "title": "رصد تحركات مشبوهة في القطاع البحري",
-    "content": "تم رصد نشاط سيبراني مكثف يستهدف خطوط الملاحة. جاري تحليل المصدر وتحديد الأهداف المعادية.",
+    "content": "تم رصد نشاط سيبراني مكثف يستهدف خطوط الملاحة. جاري تحليل المصدر وتحديد الأهداف المعادية بالتعاون مع القوات البحرية.",
     "imageUrl": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80",
     "threatLevel": "High",
     "timestamp": "2026-04-19 15:45:00",
-    "geoLocation": "14.7973° N, 42.9544° E"
+    "geoLocation": "14.7973° N, 42.9544° E",
+    "source": "مركز الرصد البحري",
+    "clearance": "سري - أحمر"
+  },
+  {
+    "id": 5,
+    "title": "تفكيك خلية تجسس تقني في الحديدة",
+    "content": "القبض على عناصر تقنية كانت تقوم بزرع أجهزة تنصت رقمية مرتبطة بأقمار صناعية تابعة لقوى الاستكبار العالمي.",
+    "imageUrl": "https://images.unsplash.com/photo-1557597774-9d2739f85a94?auto=format&fit=crop&w=800&q=80",
+    "threatLevel": "High",
+    "timestamp": "2026-04-18 09:00:00",
+    "geoLocation": "الحديدة - الميناء",
+    "source": "الأمن القومي",
+    "clearance": "سري للغاية"
+  },
+  {
+    "id": 6,
+    "title": "تأمين بيانات البنك المركزي من محاولات المسح",
+    "content": "هجوم منسق من قراصنة دوليين حاول مسح قواعد بيانات الحسابات الوطنية، تم التصدي للهجوم وتحويله لمصادر العدوان.",
+    "imageUrl": "https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?auto=format&fit=crop&w=800&q=80",
+    "threatLevel": "Critical",
+    "timestamp": "2026-04-18 12:30:00",
+    "geoLocation": "صنعاء - القطاع المالي",
+    "source": "وحدة الحماية المالية",
+    "clearance": "سيادي"
+  },
+  {
+    "id": 7,
+    "title": "تحليل شيفرة الاتصال بين بوارج العدو",
+    "content": "وحدات التنصت الرقمي تنجح في فك تشفير موجات اتصال تكتيكية بين قطع بحرية معادية في خليج عدن.",
+    "imageUrl": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80",
+    "threatLevel": "High",
+    "timestamp": "2026-04-17 01:00:00",
+    "geoLocation": "عمليات الجنوب",
+    "source": "الاستخبارات العسكرية",
+    "clearance": "سري - عسكري"
+  },
+  {
+    "id": 8,
+    "title": "تحديث جدار الحماية السيادي 'الصرخة'",
+    "content": "نشر الإصدار 4.0 من نظام الحماية الوطني الذي يغطي البنية التحتية لوزارة الكهرباء والمياه ضد فيروسات الفدية.",
+    "imageUrl": "https://images.unsplash.com/photo-1551703599-6b3e8379aa81?auto=format&fit=crop&w=800&q=80",
+    "threatLevel": "Low",
+    "timestamp": "2026-04-17 10:00:00",
+    "geoLocation": "وزارة التقنية",
+    "source": "مركز التطوير الوطني",
+    "clearance": "عام - سيادي"
+  },
+  {
+    "id": 9,
+    "title": "إحباط تسريب وثائق الدفاع الجوي",
+    "content": "محاولة فاشلة من عملاء لاختراق السحابة الوطنية الحكومية؛ تم حظر عناوين IP المصدرية وتتبعها إلى موقع في تل أبيب.",
+    "imageUrl": "https://images.unsplash.com/photo-1510511459019-5dee997d7db4?auto=format&fit=crop&w=800&q=80",
+    "threatLevel": "High",
+    "timestamp": "2026-04-16 22:40:00",
+    "geoLocation": "صنعاء - المركز الرقمي",
+    "source": "الأمن السيبراني",
+    "clearance": "سري للغاية"
+  },
+  {
+    "id": 10,
+    "title": "رصد مسيرات استطلاع صهيونية",
+    "content": "رادار 'الهزبري' يرصد بصمة إلكترونية لمسيرة صهيونية نوع 'هيرميس' كانت تحاول استطلاع إحداثيات حساسة.",
+    "imageUrl": "https://images.unsplash.com/photo-1508614589041-895b9ec9ae15?auto=format&fit=crop&w=800&q=80",
+    "threatLevel": "Critical",
+    "timestamp": "2026-04-16 16:20:00",
+    "geoLocation": "الساحل الغربي",
+    "source": "وحدة الرصد الجوي",
+    "clearance": "سري للغاية"
+  },
+  {
+    "id": 11,
+    "title": "كشف برمجيات خبيثة في تطبيقات الهواتف",
+    "content": "تحذير أمني من تطبيقات تواصل اجتماعي معدلة تستخدمها استخبارات معادية لاختراق هواتف الكوادر الوطنية.",
+    "imageUrl": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80",
+    "threatLevel": "Medium",
+    "timestamp": "2026-04-15 08:30:00",
+    "geoLocation": "تحذير وطني",
+    "source": "وحدة الرصد السيادي",
+    "clearance": "عام"
+  },
+  {
+    "id": 12,
+    "title": "تأمين منظومة التصنيع الحربي",
+    "content": "إنشاء شبكة داخلية معزولة (Air-gapped) لمنشآت التصنيع الحربي اليمني لضمان عدم الاختراق الخارجي.",
+    "imageUrl": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80",
+    "threatLevel": "Low",
+    "timestamp": "2026-04-15 11:00:00",
+    "geoLocation": "المصانع الحربية",
+    "source": "إدارة الدفاع",
+    "clearance": "سيادي - خاص"
+  },
+  {
+    "id": 13,
+    "title": "عملية 'البرق الرقمي' ضد قواعد العدوان",
+    "content": "وحدات الهجوم السيبراني تنفذ ضربات استباقية ضد خوادم التحكم في قاعدة العند المحتلة وتعطيل اتصالاتها.",
+    "imageUrl": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
+    "threatLevel": "High",
+    "timestamp": "2026-04-14 19:45:00",
+    "geoLocation": "لحج - العند",
+    "source": "وحدات المهام الخاصة",
+    "clearance": "سري للغاية"
+  },
+  {
+    "id": 14,
+    "title": "رصد ترددات لاسلكية مشبوهة في مأرب",
+    "content": "تحليل موجات راديوية غير معروفة المصدر في جبهات مأرب، يرجح أنها لأجهزة توجيه ليزري معادية.",
+    "imageUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
+    "threatLevel": "Medium",
+    "timestamp": "2026-04-14 23:10:00",
+    "geoLocation": "مأرب",
+    "source": "الاستخبارات العسكرية",
+    "clearance": "سري"
+  },
+  {
+    "id": 15,
+    "title": "تأمين بوابة الحكومة الإلكترونية اليمنية",
+    "content": "صد أكثر من 5 ملايين طلب وصول وهمي (DDoS Attack) خلال 24 ساعة استهدفت الخدمات الرقمية للمواطنين.",
+    "imageUrl": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80",
+    "threatLevel": "Medium",
+    "timestamp": "2026-04-13 14:00:00",
+    "geoLocation": "صنعاء",
+    "source": "أمن المعلومات",
+    "clearance": "عام - سيادي"
+  },
+  {
+    "id": 16,
+    "title": "اختراق بريد ضباط غرفة عمليات العدوان",
+    "content": "الحصول على مراسلات سرية تكشف خطط التصعيد القادمة في جبهات ما وراء الحدود.",
+    "imageUrl": "https://images.unsplash.com/photo-1484417855593-01007851616c?auto=format&fit=crop&w=800&q=80",
+    "threatLevel": "Critical",
+    "timestamp": "2026-04-13 21:00:00",
+    "geoLocation": "العمليات الخارجية",
+    "source": "وحدة الاستخبارات",
+    "clearance": "سري للغاية"
+  },
+  {
+    "id": 17,
+    "title": "تعطيل محطات تشويش معادية",
+    "content": "عملية نوعية تنجح في تعطيل محطة تشويش إلكتروني كانت تستهدف أنظمة الاتصال العسكرية في الجوف.",
+    "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+    "threatLevel": "High",
+    "timestamp": "2026-04-12 04:30:00",
+    "geoLocation": "الجوف",
+    "source": "وحدات الدعم الفني",
+    "clearance": "سري للغاية"
+  },
+  {
+    "id": 18,
+    "title": "فحص الأنظمة الطبية للمستشفيات الوطنية",
+    "content": "تأمين السجلات الطبية للمصابين والجرحى ضد محاولات الاختراق التي تهدف لسرقة بيانات القوات المسلحة.",
+    "imageUrl": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80",
+    "threatLevel": "Low",
+    "timestamp": "2026-04-12 11:20:00",
+    "geoLocation": "صنعاء - المستشفيات",
+    "source": "الأمن السيبراني الصحي",
+    "clearance": "سري"
+  },
+  {
+    "id": 19,
+    "title": "رصد اتصالات مشبوهة عبر الأقمار الصناعية",
+    "content": "تحديد مواقع أجهزة 'ثريا' غير مرخصة في مناطق ريفية تستخدم لإرسال إحداثيات لقوى العدوان.",
+    "imageUrl": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=800&q=80",
+    "threatLevel": "High",
+    "timestamp": "2026-04-11 16:50:00",
+    "geoLocation": "إب - تعز",
+    "source": "الأمن والمخابرات",
+    "clearance": "سري للغاية"
+  },
+  {
+    "id": 20,
+    "title": "اكتمال بناء السحابة السيادية اليمنية",
+    "content": "الإعلان عن نجاح نقل كافة بيانات الدولة إلى خوادم وطنية مستقلة تماماً عن أي نفوذ خارجي تحت إشراف الهكر الهزبري.",
+    "imageUrl": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80",
+    "threatLevel": "Low",
+    "timestamp": "2026-04-11 09:00:00",
+    "geoLocation": "صنعاء - المركز الرئيسي",
+    "source": "رئاسة الوزراء",
+    "clearance": "سيادي"
   }
 ]
